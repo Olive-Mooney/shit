@@ -1,0 +1,161 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
+
+int main(void)
+{
+   //long card = get_long("card?: ");
+   long card = 378282246310005;
+
+//non multiplied
+   long q = card % 10;
+   while(q >=10)
+   {
+      q /= 10;
+   }
+   long w = card % 1000;
+   while(w >=10)
+   {
+      w /= 10;
+   }
+   long e = card % 100000;
+   while(e >=10)
+   {
+      e /= 10;
+   }
+   long r = card % 10000000;
+   while(r >=10)
+   {
+      r /= 10;
+   }
+   long t = card % 1000000000;
+   while(t >=10)
+   {
+      t /= 10;
+   }
+   long y = card % 100000000000;
+   while(y >=10)
+   {
+      y /= 10;
+   }
+   long u = card % 10000000000000;
+   while(u >=10)
+   {
+      u /= 10;
+   }
+   long i = card % 1000000000000000;
+   while(i >=10)
+   {
+      i /= 10;
+   }
+//1
+   long z = card % 100;
+   while(z >=10)
+   {
+      z /= 10;
+   }
+   long zz = z*2;
+   long zzz = zz % 10;
+   while(zz >=5)
+   {
+        zz /= 10;
+   }
+//2
+   long x = card % 10000;
+   while(x >=10)
+   {
+      x /= 10;
+   }
+   long xx = x*2;
+   long xxx = xx % 10;
+   while(xx >=5)
+   {
+        xx /= 10;
+   }
+//3
+   long c = card % 1000000;
+   while(c >=10)
+   {
+      c /= 10;
+   }
+   long cc = c*2;
+   long ccc = cc % 10;
+   while(cc >=5)
+   {
+        cc /= 10;
+   }
+//4
+   long v = card % 100000000;
+   while(v >=10)
+   {
+      v /= 10;
+   }
+   long vv = v*2;
+   long vvv = vv % 10;
+   while(vv >=5)
+   {
+        vv /= 10;
+   }
+//5
+   long b = card % 10000000000;
+   while(b >=10)
+   {
+      b /= 10;
+   }
+   long bb = b*2;
+   long bbb = bb % 10;
+   while(bb >=5)
+   {
+        bb /= 10;
+   }
+//6
+   long n = card % 1000000000000;
+   while(n >=10)
+   {
+      n /= 10;
+   }
+   long nn = n*2;
+   long nnn = nn % 10;
+   while(nn >=5)
+   {
+        nn /= 10;
+   }
+//7
+   long m = card % 100000000000000;
+   while(m >=10)
+   {
+      m /= 10;
+   }
+   long mm = m*2;
+   long mmm = mm % 10;
+   while(mm >=5)
+   {
+        mm /= 10;
+   }
+//adding
+   long set1 = (mm+mmm+nn+nnn+bb+bbb+vv+vvv+cc+ccc+xx+xxx+zz+zzz);
+   long set2 = (q+w+e+r+t+y+u+i);
+   long output = (set1+set2);
+
+   printf("%li\n", card);
+   //orig
+   printf("%li, %li, %li, %li, %li, %li, %li\n", m, n, b, v, c, x, z);
+   printf("%li, %li, %li, %li, %li, %li, %li\n", mm, nn, bb, vv, cc, xx, zz);
+   printf("%li, %li, %li, %li, %li, %li, %li\n", mmm, nnn, bbb, vvv, ccc, xxx, zzz);
+   printf("%li, %li, %li, %li, %li, %li, %li, %li\n", i, u, y, t, r, e, w, q);
+   printf("%li\n", set1);
+   printf("%li\n", set2);
+   printf("%li\n", output);
+
+   output = (output % 10);
+   printf("%li\n", output);
+
+   if (output >= 1)
+   {
+      printf("Invalid Card Number\n");
+   }
+   else
+   {
+      printf("Card Accepted!\n");
+   }
+}
